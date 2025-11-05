@@ -371,4 +371,22 @@ form button:hover {
         grid-template-columns: 1fr;
         text-align: center;
     }
+
+      /* force-center any grid that collapses */
+  section {
+    justify-items:center;
+    text-align:center;
+  }
+
+  /* fix images/screenshots iframe centering */
+  img,
+  iframe {
+    display:block;
+    margin-inline:auto;
+  }
+
+  /* fix portrait box */
+  .portrait {
+    margin-inline:auto;
+  }
 }
