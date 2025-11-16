@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aidan Murphy - Contact</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Aidan Murphy</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <dialog id="modal">
+            <h1>Light/Dark Mode Toggle</h1>
+            <p>Click Close to close modal</p>
+            <form method="dialog">
+              <button>Close</button>
+            </form>
+        </dialog>
+        <button id="mode" onclick="modal.show()"></button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 id="ctitle">Contact Me</h1>
+    <section id="contact-form">
+        <form action="https://httpbin.org/post" method="post">
+        <fieldset>
+            <legend>Contact Me</legend>
+
+            <input type="hidden" name="possible_bot" value="true">
+
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Your name..." required aria-required="true"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Your email..." required aria-required="true"><br><br>
+
+            <label for="subject">Subject:</label><br>
+            <input type="text" id="subject" name="subject" placeholder="Your reason for reaching out..."><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" cols="33" placeholder="Write your message here..." required aria-required="true"></textarea><br><br>
+
+            <button type="submit">Send</button>
+
+            <output id="error-output" aria-live="polite"></output>
+            <output id="info-output" aria-live="polite"></output>
+
+        </fieldset>
+        </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Aidan Murphy. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
