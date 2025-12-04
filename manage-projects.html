@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Projects - CRUD</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Aidan Murphy</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="form-with-js.html">Contact</a></li>
+        <!-- Optional: add this to your main nav or just link it in Deliverable E -->
+        <li><a href="manage-projects.html">Manage Projects</a></li>
+        <li><button id="mode" class="js-only"></button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <noscript id="noJS-warning">
+    <p>JavaScript is disabled. Theme switching and CRUD are unavailable.</p>
+  </noscript>
+
+  <main>
+    <h1 id="ptitle">Manage Projects (CRUD)</h1>
+
+    <section id="manage-projects">
+      <p style="justify-self: center;">
+        Use this form to <strong>create</strong>, <strong>update</strong>, or <strong>delete</strong>
+        projects stored in <code>localStorage</code>. Changes will appear the next time you
+        press <em>Load Local</em> on the Projects page.
+      </p>
+
+      <form id="crud-form">
+        <fieldset>
+          <legend>Project Details</legend>
+
+          <label for="action">Action</label>
+          <select id="action" name="action" required>
+            <option value="create">Create</option>
+            <option value="update">Update (match by title)</option>
+            <option value="delete">Delete (by title)</option>
+          </select>
+
+          <label for="title">Title (unique key for update/delete) <span aria-hidden="true">*</span></label>
+          <input id="title" name="title" type="text" required>
+
+          <label for="img">Image URL</label>
+          <input id="img" name="img" type="text" placeholder="assets/temp-aidan.webp">
+
+          <label for="alt">Alt Text</label>
+          <input id="alt" name="alt" type="text" placeholder="Screenshot of ...">
+
+          <label for="desc">Description</label>
+          <textarea id="desc" name="desc" rows="3"
+            placeholder="Short description of the project"></textarea>
+
+          <label for="link">Link</label>
+          <input id="link" name="link" type="url" placeholder="https://github.com/...">
+
+          <button type="submit">Submit Action</button>
+
+          <output id="crud-message"></output>
+        </fieldset>
+      </form>
+
+      <section id="current-projects" style="justify-self: center; justify-items: center;">
+        <h2>Current Local Projects</h2>
+        <ul id="project-list" style="justify-items: center;"></ul>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Aidan Murphy. All Rights Reserved.</p>
+  </footer>
+
+  <script src="scripts/theme.js"></script>
+  <script src="scripts/manage-projects.js"></script>
+</body>
+</html>

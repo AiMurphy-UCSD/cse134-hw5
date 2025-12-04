@@ -504,9 +504,19 @@ form button:hover {
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: clamp(1rem, 3vw, 2.5rem);
-    justify-items: center;
+    align-items: start; 
     margin-top: clamp(2rem, 10vw, 4rem);
+
+    display: grid;
+    gap: 2rem;
+    padding: 0 1.25rem;
+    justify-items: center;
+
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+    max-width: 1500px; 
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #noJS-warning p{
