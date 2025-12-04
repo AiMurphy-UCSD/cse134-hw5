@@ -26,30 +26,22 @@
 
   <main>
     <h1 id="ptitle">Project Gallery</h1>
-    <section id="project-content">
-      <article>
-        <h3>Project 1</h3>
-        <p>Project 1 brief description</p>
-        <picture>
-          <source srcset="assets/temp-aidan.webp" type="image/webp">
-          <img src="assets/temp-aidan.webp" alt="Screenshot of Project">
-        </picture>
-        
-        <p>Below is an embedded demo preview:</p>
-        <iframe src="https://example.com/demo" title="Task Tracker Demo" width="400" height="200"></iframe>
-      </article>
+    <section id="project-content" class="card-grid">
+      <project-card 
+          title="UCSD Tennis Court Booking System"
+          img="assets/courtres.webp"
+          alt="Screenshot of Tennis Court Booking System"
+          desc="Reimagined and developed a web application for reserving tennis courts at UCSD using React for the frontend and Node.js with Express for the backend. Implemented user authentication, real-time availability updates, and an intuitive booking interface."
+          link="https://github.com/AMurphy03/Tennis-Court-Reservations">
+      </project-card>
 
-      <article>
-        <h3>Project 2</h3>
-        <p>Project 2 brief description</p>
-        <picture>
-          <source srcset="assets/temp-aidan.webp" type="image/webp">
-          <img src="assets/temp-aidan.webp" alt="Screenshot of Project">
-        </picture>
-        
-        <p>Below is an embedded demo preview:</p>
-        <iframe src="https://example.com/demo" title="Task Tracker Demo" width="400" height="200"></iframe>
-      </article>
+      <project-card 
+          title="Password Manager"
+          img="assets/passman.webp"
+          alt="Screenshot of password manager"
+          desc="Created a secure password manager application using Python and SQLite. Features include password generation, encryption, and storage, along with a user-friendly interface built with Tkinter."
+          link="https://github.com/AMurphy03/Password-Manager">
+      </project-card>
     </section>
   </main>
 
@@ -57,5 +49,6 @@
     <p>&copy; 2025 Aidan Murphy — All Projects Displayed Are Original Works.</p>
   </footer>
   <script src="scripts/theme.js"></script>
+  <script src="scripts/project-card.js"></script>
 </body>
 </html>

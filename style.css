@@ -500,6 +500,14 @@ form button:hover {
       border: none;
     }
 }
+/* === CustomElement Card Grid Layout === */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(1rem, 3vw, 2.5rem);
+    justify-items: center;
+    margin-top: clamp(2rem, 10vw, 4rem);
+}
 
 #noJS-warning p{
     padding: 1rem;
